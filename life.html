@@ -79,7 +79,6 @@
             margin-bottom: 15px;
         }
 
-        /* 占位框样式（保留给还未上传照片的剧社部分） */
         .photo-placeholder {
             width: 100%;
             height: 180px;
@@ -95,23 +94,24 @@
             transition: all 0.3s ease;
         }
 
-        /* 新增：照片画廊样式 */
+        /* 修改点：照片画廊样式优化为整体居中 */
         .photo-gallery {
             display: flex;
+            justify-content: center; /* 核心修改：让照片整体水平居中 */
+            flex-wrap: wrap; /* 核心修改：如果照片太宽，允许自动换行并保持居中 */
             gap: 15px;
             margin-top: 20px;
-            overflow-x: auto; /* 如果照片多，允许左右滑动 */
             padding-bottom: 10px;
         }
         .photo-gallery img {
-            height: 200px; /* 统一照片高度 */
+            height: 200px; 
             border-radius: 12px;
             object-fit: cover;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
         }
         .photo-gallery img:hover {
-            transform: scale(1.03); /* 鼠标悬浮时微微放大 */
+            transform: scale(1.03); 
         }
         .photo-caption {
             font-size: 0.9em;
@@ -125,7 +125,7 @@
             .container { padding: 30px 25px; margin: 20px 0; }
             h1 { font-size: 2em; }
             .nav-bar { gap: 15px; }
-            .photo-gallery img { height: 150px; } /* 手机上照片稍微小一点 */
+            .photo-gallery img { height: 150px; } 
         }
     </style>
 </head>
@@ -145,11 +145,12 @@
             <p>Outside of the lab, I am deeply passionate about music and the performing arts. I am an active musical theater actor in the <strong>Fudan University Musical Theater Society</strong>.</p>
             <p>Expressing creativity on stage and collaborating with fellow performers brings me immense joy, and it continuously inspires my perspective on human-centered design and expressive interactions. To me, designing an interactive system is much like directing a play—it requires understanding the audience, choreographing the flow, and creating a memorable experience.</p>
             
-            <div class="photo-placeholder">
+            <div class="photo-gallery">
                 <img src="imgs/show2.JPG" alt="Muscial Moment 1">
                 <img src="imgs/show3.JPG" alt="Muscial Moment 2">
                 <img src="imgs/show4.PNG" alt="Muscial Moment 3">
             </div>
+            <div class="photo-caption">Moments from my musical theater performances</div>
         </section>
 
         <section>
@@ -157,9 +158,7 @@
             <p>I love exploring the world and experiencing different cultures. My academic and personal journeys have taken me from the vibrant streets of <strong>Shanghai</strong> to the serene landscapes of <strong>Helsinki</strong>, and now to the windy city of <strong>Chicago</strong>.</p>
             <p>Traveling not only broadens my horizons but also allows me to observe how people interact with technology and their environments across different cultural contexts. Whether it's wandering through local museums, trying new cuisines, or simply taking a walk in a new city, I enjoy capturing these moments and finding inspiration along the way.</p>
 
-            <!-- 这是新的照片画廊 -->
             <div class="photo-gallery">
-                <!-- 将这里的 europe1.jpg 替换为你实际上传的文件名 -->
                 <img src="imgs/europe1.JPG" alt="Europe Travel Moment 1">
                 <img src="imgs/europe2.JPG" alt="Europe Travel Moment 2">
                 <img src="imgs/europe3.JPG" alt="Europe Travel Moment 3">
