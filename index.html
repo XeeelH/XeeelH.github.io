@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yalan He - Academic Profile</title>
     <style>
-        /* 动态渐变背景动画 */
         @keyframes gradientBG {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
@@ -27,15 +26,39 @@
             box-sizing: border-box;
         }
 
-        /* 磨砂玻璃卡片容器 */
         .container {
             width: 100%;
             max-width: 700px;
             background: rgba(255, 255, 255, 0.85); 
-            padding: 50px 60px;
+            padding: 40px 60px 50px 60px;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(10px); 
+        }
+
+        /* 顶部导航栏样式 */
+        .nav-bar {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 15px;
+        }
+        .nav-bar a {
+            text-decoration: none;
+            color: #888;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+            padding-bottom: 15px;
+            margin-bottom: -17px; /* 让高亮底线压在边框上 */
+        }
+        .nav-bar a:hover {
+            color: #8ba3e8;
+        }
+        .nav-bar a.active {
+            color: #8ba3e8;
+            border-bottom: 3px solid #8ba3e8;
         }
 
         h1 { 
@@ -49,12 +72,10 @@
             font-size: 1.1em;
             font-weight: 500;
             margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 2px solid #eee;
         }
         h2 { 
             color: #2c3e50; 
-            margin-top: 30px; 
+            margin-top: 20px; 
             margin-bottom: 10px;
             font-size: 1.4em;
         }
@@ -64,13 +85,12 @@
             margin-bottom: 15px;
         }
         
-        /* 呼应背景色系的蓝紫渐变按钮 */
         .cv-button {
             display: inline-flex;
             align-items: center;
             margin-top: 25px;
             padding: 12px 28px;
-            background: linear-gradient(135deg, #8ba3e8, #bba3f4); /* 柔和的蓝紫渐变 */
+            background: linear-gradient(135deg, #8ba3e8, #bba3f4); 
             color: #ffffff !important;
             font-size: 1rem;
             font-weight: 600;
@@ -78,12 +98,12 @@
             text-decoration: none;
             border-radius: 30px;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(139, 163, 232, 0.4); /* 带有色彩的柔和阴影 */
+            box-shadow: 0 4px 15px rgba(139, 163, 232, 0.4); 
         }
         .cv-button:hover {
             transform: translateY(-3px);
             box-shadow: 0 8px 25px rgba(139, 163, 232, 0.6);
-            background: linear-gradient(135deg, #7a94df, #ac92eb); /* 悬浮时颜色微微加深 */
+            background: linear-gradient(135deg, #7a94df, #ac92eb); 
         }
         .cv-button svg {
             margin-left: 10px;
@@ -95,18 +115,22 @@
             transform: translateX(5px); 
         }
 
-        /* 手机端适配 */
         @media (max-width: 600px) {
-            .container {
-                padding: 30px 25px;
-            }
+            .container { padding: 30px 25px; }
             h1 { font-size: 2em; }
+            .nav-bar { gap: 15px; }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
+        <!-- 导航栏 -->
+        <div class="nav-bar">
+            <a href="index.html" class="active">Academic</a>
+            <a href="life.html">Life & Arts</a>
+        </div>
+
         <h1>Yalan He</h1>
         <div class="subtitle">Undergraduate Intern | HCI & Computer Science</div>
 
@@ -114,11 +138,6 @@
             <h2>Hi there! 👋</h2>
             <p>Welcome to my corner of the internet. I am an undergraduate student majoring in Computer Science and Technology at <strong>Fudan University</strong>. Currently, I am spending my summer as a Research Intern at the <strong>University of Chicago</strong> in the Human-Computer Interaction (HCI) Lab, directed by Prof. Pedro Lopes.</p>
             <p>My research is driven by curiosity at the intersection of <strong>Human-Computer Interaction (HCI)</strong>, <strong>Machine Learning</strong>, and <strong>Brain-Inspired AI</strong>. I love exploring how computational models and interactive technologies can be leveraged to solve complex, real-world problems—from wearable sensor designs to large-scale neural connectomics.</p>
-        </section>
-
-        <section>
-            <h2>Beyond Research 🎭</h2>
-            <p>Outside of the lab, I am deeply passionate about music and the performing arts. I am an active musical theater actor in the Fudan University Musical Theater Society. Expressing creativity on stage and collaborating with fellow performers brings me immense joy, and it continuously inspires my perspective on human-centered design and expressive interactions!</p>
         </section>
 
         <a href="cv.pdf" class="cv-button" target="_blank">
