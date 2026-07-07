@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yalan He - Life & Arts</title>
     <style>
-        /* 样式与主页保持统一 */
         @keyframes gradientBG {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
@@ -35,7 +34,6 @@
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(10px); 
-            /* 当内容增多时，让卡片上下留出适当的间距 */
             margin: 40px 0; 
         }
 
@@ -80,6 +78,8 @@
             color: #444;
             margin-bottom: 15px;
         }
+
+        /* 占位框样式（保留给还未上传照片的剧社部分） */
         .photo-placeholder {
             width: 100%;
             height: 180px;
@@ -94,16 +94,38 @@
             border: 2px dashed #ccc;
             transition: all 0.3s ease;
         }
-        .photo-placeholder:hover {
-            background-color: rgba(240, 240, 240, 0.8);
-            border-color: #8ba3e8;
-            color: #8ba3e8;
+
+        /* 新增：照片画廊样式 */
+        .photo-gallery {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            overflow-x: auto; /* 如果照片多，允许左右滑动 */
+            padding-bottom: 10px;
+        }
+        .photo-gallery img {
+            height: 200px; /* 统一照片高度 */
+            border-radius: 12px;
+            object-fit: cover;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .photo-gallery img:hover {
+            transform: scale(1.03); /* 鼠标悬浮时微微放大 */
+        }
+        .photo-caption {
+            font-size: 0.9em;
+            color: #888;
+            text-align: center;
+            margin-top: 8px;
+            font-style: italic;
         }
 
         @media (max-width: 600px) {
             .container { padding: 30px 25px; margin: 20px 0; }
             h1 { font-size: 2em; }
             .nav-bar { gap: 15px; }
+            .photo-gallery img { height: 150px; } /* 手机上照片稍微小一点 */
         }
     </style>
 </head>
@@ -133,9 +155,15 @@
             <p>I love exploring the world and experiencing different cultures. My academic and personal journeys have taken me from the vibrant streets of <strong>Shanghai</strong> to the serene landscapes of <strong>Helsinki</strong>, and now to the windy city of <strong>Chicago</strong>.</p>
             <p>Traveling not only broadens my horizons but also allows me to observe how people interact with technology and their environments across different cultural contexts. Whether it's wandering through local museums, trying new cuisines, or simply taking a walk in a new city, I enjoy capturing these moments and finding inspiration along the way.</p>
 
-            <div class="photo-placeholder">
-                [ Travel moments & Photography coming soon! ]
+            <!-- 这是新的照片画廊 -->
+            <div class="photo-gallery">
+                <!-- 将这里的 europe1.jpg 替换为你实际上传的文件名 -->
+                <img src="imgs/europe1.jpg" alt="Europe Travel Moment 1">
+                <img src="imgs/europe2.jpg" alt="Europe Travel Moment 2">
+                <img src="imgs/europe3.jpg" alt="Europe Travel Moment 2">
             </div>
+            <div class="photo-caption">Memories from my time in Europe</div>
+
         </section>
     </div>
 
