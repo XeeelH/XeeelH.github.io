@@ -23,14 +23,14 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh; /* 让卡片在页面垂直居中 */
+            min-height: 100vh;
             box-sizing: border-box;
         }
 
         /* 磨砂玻璃卡片容器 */
         .container {
             width: 100%;
-            max-width: 700px; /* 稍微调窄一点，更符合极简名片的比例 */
+            max-width: 700px;
             background: rgba(255, 255, 255, 0.85); 
             padding: 50px 60px;
             border-radius: 20px;
@@ -45,7 +45,7 @@
             font-size: 2.5em;
         }
         .subtitle {
-            color: #3498db;
+            color: #666; /* 调成更高级的低调灰色 */
             font-size: 1.1em;
             font-weight: 500;
             margin-bottom: 30px;
@@ -64,23 +64,35 @@
             margin-bottom: 15px;
         }
         
-        /* 简历下载按钮样式 */
+        /* 新的高级感胶囊按钮样式 */
         .cv-button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 25px;
-            background-color: #3498db;
+            display: inline-flex;
+            align-items: center;
+            margin-top: 25px;
+            padding: 12px 28px;
+            background-color: #1d1d1f; /* 极简黑/深灰 */
             color: #ffffff !important;
-            font-weight: bold;
+            font-size: 1rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
             text-decoration: none;
-            border-radius: 8px;
+            border-radius: 30px; /* 胶囊形状 */
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
         }
         .cv-button:hover {
-            background-color: #2980b9;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+            background-color: #434345;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+        .cv-button svg {
+            margin-left: 10px;
+            width: 18px;
+            height: 18px;
+            transition: transform 0.3s ease;
+        }
+        .cv-button:hover svg {
+            transform: translateX(5px); /* 悬浮时箭头向右微动 */
         }
 
         /* 手机端适配 */
@@ -109,8 +121,11 @@
             <p>Outside of the lab, I am deeply passionate about music and the performing arts. I am an active musical theater actor in the Fudan University Musical Theater Society. Expressing creativity on stage and collaborating with fellow performers brings me immense joy, and it continuously inspires my perspective on human-centered design and expressive interactions!</p>
         </section>
 
-        <!-- 简历链接按钮 -->
-        <a href="cv.pdf" class="cv-button" target="_blank">📄 View My Full CV</a>
+        <!-- 重新设计的带有动态箭头的极简按钮 -->
+        <a href="cv.pdf" class="cv-button" target="_blank">
+            View Full CV
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+        </a>
     </div>
 
 </body>
