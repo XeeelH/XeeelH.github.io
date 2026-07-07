@@ -45,7 +45,7 @@
             font-size: 2.5em;
         }
         .subtitle {
-            color: #666; /* 调成更高级的低调灰色 */
+            color: #666; 
             font-size: 1.1em;
             font-weight: 500;
             margin-bottom: 30px;
@@ -64,26 +64,26 @@
             margin-bottom: 15px;
         }
         
-        /* 新的高级感胶囊按钮样式 */
+        /* 呼应背景色系的蓝紫渐变按钮 */
         .cv-button {
             display: inline-flex;
             align-items: center;
             margin-top: 25px;
             padding: 12px 28px;
-            background-color: #1d1d1f; /* 极简黑/深灰 */
+            background: linear-gradient(135deg, #8ba3e8, #bba3f4); /* 柔和的蓝紫渐变 */
             color: #ffffff !important;
             font-size: 1rem;
-            font-weight: 500;
+            font-weight: 600;
             letter-spacing: 0.5px;
             text-decoration: none;
-            border-radius: 30px; /* 胶囊形状 */
+            border-radius: 30px;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 4px 15px rgba(139, 163, 232, 0.4); /* 带有色彩的柔和阴影 */
         }
         .cv-button:hover {
-            background-color: #434345;
             transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 25px rgba(139, 163, 232, 0.6);
+            background: linear-gradient(135deg, #7a94df, #ac92eb); /* 悬浮时颜色微微加深 */
         }
         .cv-button svg {
             margin-left: 10px;
@@ -92,7 +92,7 @@
             transition: transform 0.3s ease;
         }
         .cv-button:hover svg {
-            transform: translateX(5px); /* 悬浮时箭头向右微动 */
+            transform: translateX(5px); 
         }
 
         /* 手机端适配 */
@@ -121,7 +121,6 @@
             <p>Outside of the lab, I am deeply passionate about music and the performing arts. I am an active musical theater actor in the Fudan University Musical Theater Society. Expressing creativity on stage and collaborating with fellow performers brings me immense joy, and it continuously inspires my perspective on human-centered design and expressive interactions!</p>
         </section>
 
-        <!-- 重新设计的带有动态箭头的极简按钮 -->
         <a href="cv.pdf" class="cv-button" target="_blank">
             View Full CV
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
