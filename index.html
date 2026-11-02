@@ -1,150 +1,123 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yalan He - Academic Profile</title>
-    <style>
-        @keyframes gradientBG {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        body { 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
-            margin: 0; 
-            padding: 50px 20px; 
-            color: #333; 
-            background: linear-gradient(-45deg, #fbc2eb, #a6c1ee, #c2e9fb, #e0c3fc);
-            background-size: 400% 400%;
-            animation: gradientBG 15s ease infinite;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            box-sizing: border-box;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 700px;
-            background: rgba(255, 255, 255, 0.85); 
-            padding: 40px 60px 50px 60px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px); 
-        }
-
-        /* 顶部导航栏样式 */
-        .nav-bar {
-            display: flex;
-            gap: 25px;
-            margin-bottom: 40px;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 15px;
-        }
-        .nav-bar a {
-            text-decoration: none;
-            color: #888;
-            font-weight: 600;
-            font-size: 1.1em;
-            transition: color 0.3s ease;
-            padding-bottom: 15px;
-            margin-bottom: -17px; /* 让高亮底线压在边框上 */
-        }
-        .nav-bar a:hover {
-            color: #8ba3e8;
-        }
-        .nav-bar a.active {
-            color: #8ba3e8;
-            border-bottom: 3px solid #8ba3e8;
-        }
-
-        h1 { 
-            color: #2c3e50; 
-            margin-top: 0;
-            margin-bottom: 5px;
-            font-size: 2.5em;
-        }
-        .subtitle {
-            color: #666; 
-            font-size: 1.1em;
-            font-weight: 500;
-            margin-bottom: 30px;
-        }
-        h2 { 
-            color: #2c3e50; 
-            margin-top: 20px; 
-            margin-bottom: 10px;
-            font-size: 1.4em;
-        }
-        p {
-            line-height: 1.7;
-            color: #444;
-            margin-bottom: 15px;
-        }
-        
-        .cv-button {
-            display: inline-flex;
-            align-items: center;
-            margin-top: 25px;
-            padding: 12px 28px;
-            background: linear-gradient(135deg, #8ba3e8, #bba3f4); 
-            color: #ffffff !important;
-            font-size: 1rem;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-            text-decoration: none;
-            border-radius: 30px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(139, 163, 232, 0.4); 
-        }
-        .cv-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(139, 163, 232, 0.6);
-            background: linear-gradient(135deg, #7a94df, #ac92eb); 
-        }
-        .cv-button svg {
-            margin-left: 10px;
-            width: 18px;
-            height: 18px;
-            transition: transform 0.3s ease;
-        }
-        .cv-button:hover svg {
-            transform: translateX(5px); 
-        }
-
-        @media (max-width: 600px) {
-            .container { padding: 30px 25px; }
-            h1 { font-size: 2em; }
-            .nav-bar { gap: 15px; }
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Yalan He is an undergraduate researcher in Computer Science at Fudan University, interested in human-computer interaction, human-AI interaction, and intelligent interactive systems.">
+  <meta name="theme-color" content="#fafaf8">
+  <title>Yalan He | Academic Homepage</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <div class="container">
-        <!-- 导航栏 -->
-        <div class="nav-bar">
-            <a href="index.html" class="active">Academic</a>
-            <a href="life.html">Life & Arts</a>
-        </div>
-
-        <h1>Yalan He</h1>
-        <div class="subtitle">Undergraduate Intern | HCI & Computer Science</div>
-
-        <section>
-            <h2>Hi there! 👋</h2>
-            <p>Welcome to my corner of the internet. I am an undergraduate student majoring in Computer Science and Technology at <strong>Fudan University</strong>. Currently, I am spending my summer as a Research Intern at the <strong>University of Chicago</strong> in the Human-Computer Interaction (HCI) Lab, directed by Prof. Pedro Lopes.</p>
-            <p>My research is driven by curiosity at the intersection of <strong>Human-Computer Interaction (HCI)</strong>, <strong>Machine Learning</strong>, and <strong>Brain-Inspired AI</strong>. I love exploring how computational models and interactive technologies can be leveraged to solve complex, real-world problems—from wearable sensor designs to large-scale neural connectomics.</p>
-        </section>
-
-        <a href="cv.pdf" class="cv-button" target="_blank">
-            View Full CV
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-        </a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Yalan He home">Yalan He<span>.</span></a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#about" aria-current="page">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#education">Education</a>
+        <a href="life.html">Life &amp; Arts</a>
+        <a class="nav-cv" href="cv.pdf" target="_blank" rel="noopener noreferrer">CV ↗</a>
+      </nav>
     </div>
+  </header>
 
+  <main class="page-shell">
+    <section id="about" class="hero" aria-labelledby="name-heading">
+      <div class="hero-copy">
+        <p class="eyebrow">Undergraduate Researcher · Computer Science</p>
+        <h1 id="name-heading">Yalan He</h1>
+        <p class="hero-lead">Exploring intelligent interactive systems that understand people and support human capabilities.</p>
+        <p class="body-copy">I am a final-year undergraduate studying Computer Science and Technology at <strong>Fudan University</strong>, and a former exchange student at <strong>Aalto University</strong>. My interests lie at the intersection of human-computer interaction, human-AI interaction, and computational methods for understanding human behavior.</p>
+        <p class="body-copy">My research experiences span physical human-computer interaction, human motion analysis, human-AI collaboration, and graph-based modeling. I am particularly interested in how assistive systems can adapt to people while supporting their learning, judgment, and control.</p>
+        <div class="quick-links">
+          <a href="mailto:23307130480@m.fudan.edu.cn">Email</a>
+          <a href="https://github.com/XeeelH" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="cv.pdf" target="_blank" rel="noopener noreferrer">Curriculum Vitae</a>
+        </div>
+      </div>
+      <aside class="hero-aside" aria-label="Profile at a glance">
+        <p class="small-label">At a glance</p>
+        <dl class="profile-fact"><dt>Current affiliation</dt><dd>Fudan University<br>Shanghai, China</dd></dl>
+        <dl class="profile-fact"><dt>Previous research</dt><dd>University of Chicago<br>Aalto University</dd></dl>
+        <dl class="profile-fact"><dt>Research interests</dt><dd>Human-Computer Interaction<br>Human-AI Interaction<br>Human Sensing &amp; Adaptive Systems</dd></dl>
+        <dl class="profile-fact"><dt>Next step</dt><dd>Graduate study in Computer Science, Fall 2027</dd></dl>
+      </aside>
+    </section>
+
+    <section id="research" class="content-section" aria-labelledby="research-heading">
+      <div><p class="section-number section-kicker">01 / Research</p><h2 id="research-heading" class="section-title">Research<br>Experience</h2></div>
+      <div class="section-content">
+        <article class="experience-item">
+          <div>
+            <h3 class="item-title">Human Computer Integration Lab, University of Chicago</h3>
+            <p class="item-subtitle">Summer Research Intern · Advised by Prof. Pedro Lopes</p>
+            <p class="item-description">Developed interactive experiments to investigate how physical guidance through electrical muscle stimulation (EMS) might influence motor learning and interaction with assistive systems. Built experimental prototypes and analyses for comparing independent task performance around guided practice.</p>
+          </div>
+          <time class="item-date" datetime="2026-07">Jul – Aug 2026</time>
+        </article>
+        <article class="experience-item">
+          <div>
+            <h3 class="item-title">Mobile Cloud Computing Group, Aalto University</h3>
+            <p class="item-subtitle">Research Intern · Advised by Prof. Yu Xiao</p>
+            <p class="item-description">Benchmarked 3D human motion reconstruction methods and incorporated temporal smoothing into a video-to-motion pipeline. Supported research on human-AI collaboration in wearable sensing and e-textile design.</p>
+          </div>
+          <time class="item-date" datetime="2025-08">Aug 2025 – Mar 2026</time>
+        </article>
+        <article class="experience-item">
+          <div>
+            <h3 class="item-title">Big Data and Networking Group, Fudan University</h3>
+            <p class="item-subtitle">Research Assistant · Working with Qingyuan Gong and collaborators</p>
+            <p class="item-description">Investigated social bot detection using heterogeneous graph neural networks and social network data, with subsequent exploration of LLM-driven bots and agent-based simulations.</p>
+          </div>
+          <time class="item-date" datetime="2024-02">Feb 2024 – Present</time>
+        </article>
+        <article class="experience-item">
+          <div>
+            <h3 class="item-title">Research Group, Peking University</h3>
+            <p class="item-subtitle">Research Assistant · Advised by Prof. Guozhang Chen</p>
+            <p class="item-description">Explored graph-based modeling for synaptic connectivity prediction using large-scale connectomics data, drawing on graph neural networks and brain-inspired computational approaches.</p>
+          </div>
+          <time class="item-date" datetime="2025-10">Oct 2025 – May 2026</time>
+        </article>
+      </div>
+    </section>
+
+    <section id="publications" class="content-section" aria-labelledby="publications-heading">
+      <div><p class="section-number section-kicker">02 / Publications</p><h2 id="publications-heading" class="section-title">Publications</h2></div>
+      <div class="section-content">
+        <article class="publication">
+          <p class="publication-title">Fine-grained Motion Retrieval via Joint-Angle Motion Images and Token-Patch Late Interaction</p>
+          <p class="publication-authors">Yao Zhang, Zhuchenyang Liu, <strong>Yalan He</strong>, Thomas Ploetz, Yu Xiao</p>
+          <span class="publication-venue">ACCV 2026 · Accepted</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="education" class="content-section" aria-labelledby="education-heading">
+      <div><p class="section-number section-kicker">03 / Education</p><h2 id="education-heading" class="section-title">Education</h2></div>
+      <div class="section-content">
+        <article class="education-item">
+          <div><h3>Fudan University</h3><p>B.Eng. in Computer Science and Technology · Shanghai, China</p></div>
+          <time datetime="2023-09">Sep 2023 – Jun 2027 (expected)</time>
+        </article>
+        <article class="education-item">
+          <div><h3>Aalto University</h3><p>Exchange Studies in Computer Science · Espoo, Finland</p></div>
+          <time datetime="2025-09">Sep – Dec 2025</time>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="content-section" aria-labelledby="contact-heading">
+      <div><p class="section-number section-kicker">04 / Contact</p><h2 id="contact-heading" class="section-title">Get in Touch</h2></div>
+      <div class="section-content contact-content">
+        <p>I welcome conversations about research at the intersection of people, computation, and interactive systems.</p>
+        <div class="contact-links"><a href="mailto:23307130480@m.fudan.edu.cn">23307130480@m.fudan.edu.cn ↗</a><a href="https://github.com/XeeelH" target="_blank" rel="noopener noreferrer">github.com/XeeelH ↗</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="footer-inner"><span>© 2026 Yalan He</span><span>Last updated November 2026 · <a href="life.html">Life &amp; Arts</a></span></div></footer>
 </body>
 </html>
