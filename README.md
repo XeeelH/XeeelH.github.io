@@ -1,22 +1,19 @@
-# Yalan He · Academic Homepage
+# Yalan He — Academic Homepage
 
-A lightweight, static academic homepage hosted on GitHub Pages. No build process, JavaScript dependency, analytics, or third-party fonts.
+A lightweight academic homepage, hosted with GitHub Pages.
 
-## How to publish
+## Files
 
-1. Review the text in `index.html` (especially research descriptions and publication status).
-2. **Replace `cv.pdf` with your latest approved CV before publishing**. The included PDF came from the original repository and is outdated (it does not include the University of Chicago internship and has outdated manuscript labels).
-3. Commit and push the files at the root of your `XeeelH.github.io` GitHub repository. Keep `index.html`, `life.html`, `styles.css`, `cv.pdf`, and `imgs/` together.
-4. Check the site at `https://xeeelh.github.io/`, including the CV button, email link, mobile layout, and photos.
+- `index.html`: main page (About, Research, Publications, Education, Contact)
+- `styles.css`: main page stylesheet
+- `cv.pdf`: downloadable curriculum vitae
 
-## Research information & publication permission
+The Life & Arts page has been removed from this version.
 
-- The public site includes only a high-level description of the University of Chicago internship; it intentionally does not publish experimental data, videos, code, or unpublished manuscripts. Confirm with your lab before adding any of those.
-- The ACCV 2026 paper is labelled `Accepted` based on the applicant's supplied information. Double-check the venue name and final citation before publishing.
-- The e-textile manuscript is not listed while its publication / sharing status is being verified.
+## Publishing
 
-## Customize
+Upload the files above to the root of the `XeeelH/XeeelH.github.io` repository.
+Delete the old `life.html` from the repository. The `imgs/` directory can also be deleted if it is no longer needed elsewhere.
+Note: uploading new files does **not** automatically delete existing files in GitHub.
 
-- Update text and links in `index.html` / `life.html`.
-- Change the palette in the CSS custom properties at the start of `styles.css`.
-- Optimized `.webp` photos are under `imgs/`.
+Do not publish unpublished lab manuscripts, videos, or datasets without permission.
